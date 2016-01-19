@@ -1,0 +1,12 @@
+machine:
+	services:
+		- docker
+
+test:
+	override:
+		- docker run -d lc9900/webapp:auto
+
+dependencies:
+	override:
+		- docker build -t lc9900/webapp:auto .
+
